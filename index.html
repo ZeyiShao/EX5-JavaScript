@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghibli Carousel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav id="mainNav">
+    <img src="assets/menu-icon.png" id="menuToggle" class="menu-icon" alt="menu">
+    <ul id="navLinks">
+      <li><a href="#carousel">Home</a></li>
+      <li><a href="#registration">Register</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="carousel" class="carousel">
+    <div id="slides" class="slides">
+      <div class="slide card">
+        <img class="poster" src="assets/arrietty.webp" alt="Arrietty Poster">
+        <video class="trailer" src="assets/arrietty-trailer.mp4" autoplay muted loop controls></video>
+        <div class="caption">
+          <h2>Arrietty</h2>
+          <p>A tiny girl lives hidden in a human house. Her life changes when she is discovered by a boy.</p>
+        </div>
+      </div>
+      <div class="slide card">
+        <img class="poster" src="assets/howlscastle.jpg" alt="Howl's Moving Castle Poster">
+        <video class="trailer" src="assets/howl-trailer.mp4" autoplay muted loop controls></video>
+        <div class="caption">
+          <h2>Howl's Moving Castle</h2>
+          <p>Sophie is cursed and meets Howl, a mysterious wizard, in a walking castle.</p>
+        </div>
+      </div>
+      <div class="slide card">
+        <img class="poster" src="assets/kiki.webp" alt="Kiki Poster">
+        <video class="trailer" src="assets/kiki-trailer.mp4" autoplay muted loop controls></video>
+        <div class="caption">
+          <h2>Kiki's Delivery Service</h2>
+          <p>A young witch starts her flying delivery service and learns about confidence.</p>
+        </div>
+      </div>
+      <div class="slide card">
+        <img class="poster" src="assets/totoro.jpg" alt="Totoro Poster">
+        <video class="trailer" src="assets/totoro-trailer.mp4" autoplay muted loop controls></video>
+        <div class="caption">
+          <h2>My Neighbor Totoro</h2>
+          <p>Two girls move to the countryside and discover forest spirits.</p>
+        </div>
+      </div>
+      <div class="slide card">
+        <img class="poster" src="assets/spiritedaway.jpg" alt="Spirited Away Poster">
+        <video class="trailer" src="assets/spirited-away-trailer.mp4" autoplay muted loop controls></video>
+        <div class="caption">
+          <h2>Spirited Away</h2>
+          <p>A young girl enters a spirit world to save her parents.</p>
+        </div>
+      </div>
+    </div>
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </section>
+
+  <!-- 🛍️ Shopping Section (Added) -->
+  <section id="shopping">
+    <h2>Ghibli Merchandise Shop</h2>
+    <input type="text" id="searchInput" placeholder="Search merchandise...">
+    <div id="productList" class="product-scroll"></div>
+    <button id="checkoutBtn" class="hidden">Go to Checkout</button>
+  </section>
+
+  <section id="registration">
+    <form id="registrationform">
+      <label for="date-of-visit">Date of Visit:
+        <input type="date" id="date-of-visit" required>
+        <span class="error" id="visitDateError"></span>
+      </label><br>
+
+      <label for="no-of-visitors">Number of Visitors:
+        <select id="no-of-visitors" required>
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+        </select>
+        <span class="error" id="visitorsError"></span>
+      </label><br>
+
+      <label for="name">Full Name:
+        <input type="text" id="name" required>
+        <span class="error" id="nameError"></span>
+      </label><br>
+
+      <label for="email">Email:
+        <input type="email" id="email" required>
+        <span class="error" id="emailError"></span>
+      </label><br>
+
+      <label for="dob">Date of Birth:
+        <input type="date" id="dob" required>
+        <span class="error" id="dobError"></span>
+      </label><br>
+
+      <label>Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <span class="error" id="genderError"></span>
+      </label><br>
+
+      <label for="ticket">Ticket Type:
+        <select id="ticket" required>
+          <option value="">Select</option>
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+        </select>
+        <span class="error" id="ticketError"></span>
+      </label><br>
+
+      <label for="comments">Comments:
+        <textarea id="comments" rows="4" cols="40"></textarea>
+      </label><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
