@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!valid) e.preventDefault();
   });
 
-  // 🛒 Shopping Section Logic
+  
   const searchInput = document.getElementById("searchInput");
   const productList = document.getElementById("productList");
   const checkoutBtn = document.getElementById("checkoutBtn");
